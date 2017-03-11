@@ -26,6 +26,7 @@ app.get('/family/:gender', mainCtrl.getFamilyByGender);
 app.get('/restaurants', mainCtrl.getRestaurants);
 app.get('/restaurants/:name', mainCtrl.getRestaurantsByName);
 app.get('/skills', mainCtrl.getSkills);
+app.get('/secrets/:username/:pin', middleware.verifyUser, mainCtrl.getSecrets);
 
 //------PUT REQUESTS--------
 app.put('/name', mainCtrl.putName);

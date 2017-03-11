@@ -19,5 +19,15 @@ module.exports = {
   generateId: function(req, res, next){
     req.body.id = userSkills.skills.length + 1;
     next();
-  }
+  },
+
+  verifyUser: function(req, res, next){
+    if(req.params.username === "ryan" && req.params.pin === "777"){
+      next();
+    }
+    else {
+      res.json({error: "Incorrect username and pin"});
+      //will not run the getSecrets function in the controller because there is no next()
+    }
+  },
 };

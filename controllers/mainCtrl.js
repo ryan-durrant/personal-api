@@ -1,6 +1,7 @@
 //jshint esversion: 6
 let user = require('../user.js');
 let userSkills = require('../skills.js');
+let secrets = require('../secrets.js');
 
 module.exports = {
     getName: function(req, res, next) {
@@ -138,6 +139,13 @@ module.exports = {
         };
         res.json(skillset);
       }
+    },
+
+    getSecrets: function(req, res, next) {
+      let response = {
+        secrets: secrets.secretsArr
+      };
+      res.json(response);
     },
 
     //---------------------PUT REQUESTS------------------

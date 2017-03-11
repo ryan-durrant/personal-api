@@ -29,5 +29,36 @@ module.exports = {
       latestOccupation: user.occupations.slice(user.occupations.length-1)
     };
     res.json(latestJob);
+  },
+
+  getHobbies: function(req, res){
+    let hobbies = {
+      hobbies: user.hobbies
+    };
+    res.json(hobbies);
+  },
+
+  getHobbiesByType: function(req, res){
+      let hobbies = user.hobbies;
+      let newArr = hobbies.filter(function(e){
+        // console.log(req.params.type);
+        if(e.type === req.params.type){
+          return e;
+        }
+      });
+      res.json(newArr);
+  },
+
+  getFamily: function(req, res){
+    let family = user.family;
+    if(req.query.relation){
+      let familyRelations = family.filter(function(e){
+        if(e.relation === req.query.relation){
+          return e;
+        }
+      });
+      res.json(familyRelations);
+    }
+    res.json(family);
   }
 };

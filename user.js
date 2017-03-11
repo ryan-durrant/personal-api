@@ -14,7 +14,7 @@ let user = {
     },
     {
       name: 'Entrepreneurship',
-      type: 'freakin hard'
+      type: 'adventure'
     }
   ],
   family: [

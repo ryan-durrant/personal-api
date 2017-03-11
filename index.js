@@ -14,7 +14,7 @@ app.use(middleware.addHeaders);
 //Remember that the app.use() method just applies a function to every request made before passing it on to the next function or eventually sending a response.
 
 
-//------GET REQUESTS--------
+//------GET REQUESTS--------//
 app.get('/name', mainCtrl.getName);
 app.get('/location', mainCtrl.getLocation);
 app.get('/occupations', mainCtrl.getOccupations);
@@ -28,11 +28,11 @@ app.get('/restaurants/:name', mainCtrl.getRestaurantsByName);
 app.get('/skills', mainCtrl.getSkills);
 app.get('/secrets/:username/:pin', middleware.verifyUser, mainCtrl.getSecrets);
 
-//------PUT REQUESTS--------
+//------PUT REQUESTS--------//
 app.put('/name', mainCtrl.putName);
 app.put('/location', mainCtrl.putLocation);
 
-//------POST REQUESTS--------
+//------POST REQUESTS--------//
 app.post('/hobbies', mainCtrl.postHobbies);
 app.post('/occupations', mainCtrl.postOccupations);
 app.post('/family', mainCtrl.postFamily);

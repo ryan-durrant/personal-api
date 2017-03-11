@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <title>Full-Stack App</title>
+  </head>
+  <body>
+    <h1>Full-Stack</h1>
+
+    <ui-view></ui-view>
+
+
+    <!-- Including angular and ui-router then our javascript files. ORDER MATTERS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+    <!--Custom Script Files-->
+    <script src="./app.js"></script>
+    <script src="./service.js"></script>
+    <script src='./controller.js'></script>
+  </body>
+</html>

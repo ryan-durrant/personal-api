@@ -2,7 +2,7 @@
 let user = {
   name: 'Ryan',
   location: 'Provo',
-  occupations: ['student', 'ScanFactor Founder'],
+  occupations: ['student', 'ScanFactor Founder', 'DevMountain Mountaineer'],
   hobbies: [
     {
       name: 'Rock climbing',

@@ -1,3 +1,6 @@
+//jshint esversion: 6
+let userSkills = require('../skills.js');
+
 module.exports = {
   addHeaders: function(req, res, next) {
     res.status(200).set({
@@ -10,6 +13,11 @@ module.exports = {
       'Content-Security-Policy': "default-src 'self' devmountain.github.io"
     });
 
+    next();
+  },
+
+  generateId: function(req, res, next){
+    req.body.id = userSkills.skills.length + 1;
     next();
   }
 };
